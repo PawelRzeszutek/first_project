@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-
+import Title from '../Title';
+import CartColumns from './CartColumns'
 export default class Cart extends Component {
     render() {
         return (
-            <div>
-                <h3>hello fromm cart</h3>
-            </div>
+            <section>
+                <Title name="your" title="cart" />
+                <CartColumns />
+            </section>
         )
     }
 }
