@@ -80,7 +80,13 @@ const ProductContext = React.createContext();
         console.log('item removed');
      };
      clearCart = () =>{
-        console.log('cart was cleared')
+        this.setState(()=>{
+            return {cart:[]}
+            },()=>{
+                this.setProducts();    
+                this.addTotals();
+            }
+        );
      };
      addTotals = () =>{
          let subTotal = 0;
